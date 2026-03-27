@@ -52,7 +52,7 @@
 				<b>Nassify your website today!</b>
 			</p>
 			
-			<p class="area">
+			<p class="alert">
 				This project is a living work-in-progress.<br/>
 				Get the current version from <a href="https://github.com/madpew/negnasu-css">github.com/madpew/negnasu-css</a>.
 			</p>
@@ -67,11 +67,12 @@
 				<li>sticky-notes</li>
 				<li>popovers</li>
 				<li>inputs</li>
+				<li>alerts</li>
 			</ul>
 
 			<p class="text light">Below you can find a few examples. For more information consider looking at the source.</p>
 
-			<hr/>
+			<hr />
 
 			<h3>Checkerboard:</h3>
 
@@ -83,21 +84,21 @@
 
 			<div class="chatbubble">These are chatbubbles!</div>
 			<div class="chatbubble" style="display:inline-block;">They can be used as inline or block elements<br/>multiple lines of text.</div>
-			<div class="chatbubble" data-tag="user" data-tag-text="User">Not only do they look pretty cool...</div>
-			<div class="chatbubble" data-tag="sub" data-tag-text="Subscriber">..they also come in different colors!</div>
-			<div class="chatbubble" data-tag="vip" data-tag-text="VIP">They can contain emoji👍 and/or images and wrap with very long sentences if that is a requirement or you're one of those people who can't seem to finish a sentence in a suitable length.</div>
-			<div class="chatbubble" data-tag="mod" data-tag-text="Moderator">Or maybe<br/>you prefer to channel<br/>your inner Gen-Z<br/>and do linebreaks<br/>in between.</div>
-			<div class="chatbubble" data-tag="broadcaster" data-tag-text="NegNasu">Colors and labels can be changed with data-properties.</div>
-			<div class="chatbubble" data-tag="user" data-tag-text="VeryLongLabelThatIsWayTooLong">Long labels extend and push aside the text-content</div>
+			<div class="chatbubble" data-type="user" data-tag="User">Not only do they look pretty cool...</div>
+			<div class="chatbubble" data-type="sub" data-tag="Subscriber">..they also come in different colors!</div>
+			<div class="chatbubble" data-type="vip" data-tag="VIP">They can contain emoji👍 and/or images and wrap with very long sentences if that is a requirement or you're one of those people who can't seem to finish a sentence in a suitable length.</div>
+			<div class="chatbubble" data-type="mod" data-tag="Moderator">Or maybe<br/>you prefer to channel<br/>your inner Gen-Z<br/>and do linebreaks<br/>in between.</div>
+			<div class="chatbubble" data-type="broadcaster" data-tag="NegNasu">Colors and labels can be changed with data-properties.</div>
+			<div class="chatbubble" data-type="user" data-tag="VeryLongLabelThatIsWayTooLong">Long labels extend and push aside the text-content</div>
 
 			<h3>Sticky-Notes:</h3>
 			
-			<p>Those always come in handy! Available in different colors and optional tape-strip they even work to add photos to your site.</p>
+			<p>Those always come in handy! Available in different colors and with optional tape-strip they even work to add photos to your site.</p>
 			
 			<div>
 				<div class="stickynote" data-attachment="tape">This is a<br/>stickynote!<br/>with tape</div>
 				<div class="stickynote" data-color="purple">this one is<br/>purple!</div>
-				<div class="stickynote" data-color="blue">Use the<br/>data-properties<br/>color and<br />attachment to<br/>customize</div>
+				<div class="stickynote" data-color="blue" data-attachment="tape">Use the<br/>data-properties<br/>color and<br />attachment to<br/>customize</div>
 				<div class="stickynote" data-color="white"><img src="https://placecats.com/300/200" class="photo" />This is me!</div>
 				<div class="stickynote" data-attachment="tape" data-color="white"><img src="https://placecats.com/300/300" class="photo" /></div>
 			</div>
@@ -125,27 +126,33 @@
 				<input type="text" placeholder="disabled field" disabled value="disabled" />
 			</fieldset>
 			
-			<fieldset data-tag="sub">
+			<fieldset data-type="sub">
 				<legend>buttons</legend>
 				<button type="button">active button</button>
 				<button type="button" disabled>disabled</button>
 			</fieldset>
 			
-			<fieldset data-tag="mod">
+			<fieldset data-type="mod">
 				<legend>checkboxes</legend>
 				<label><input type="checkbox" />active checkbox</label><br/>
 				<label><input type="checkbox" disabled />disabled checkbox</label><br/>
-				<label>disabled checked checkbox<input type="checkbox"  disabled checked /></label>
+				<label>disabled checked checkbox<input type="checkbox"  disabled checked /></label><br/>
+				<label>switch-toggle<input type="checkbox" class="switch" /></label>
+				<label>switch-toggle<input type="checkbox" class="switch" disabled /></label>
 			</fieldset>
 
-			<div class="area">
-				<h3>Missing something?</h3>
-				<p>Feel free to report bugs or suggest missing elements on the github issue-tracker. Contributions welcome, but please get in contact before sending a pull-request.</p>
-			</div>
+			<h3>Alerts:</h3>
+
+			<div class="alert" open>Alerts can be used to highlight important information or status changes.</div>
+
+			<details class="alert" data-type="broadcaster" open data-dismiss="true"><summary></summary>Combined with the details-element they can be dismissable.</details>
+
+			<h3>Missing something?</h3>
+			<p>Feel free to report bugs or suggest missing elements on the github issue-tracker. Contributions welcome, but please get in contact before sending a pull-request.</p>
 		</main>
 
 		<div id="test-popover" popover="manual" class="popover" data-type="sub" data-title="PopOver" data-x="true">
-			<button type="button" popovertarget="test-popover" popovertargetaction="hide">X</button>
+			<button type="button" popovertarget="test-popover" popovertargetaction="hide"></button>
 			This is an example popover. Nothing to see here.
 		</div>
 	</body>
