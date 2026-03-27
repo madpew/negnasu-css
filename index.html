@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="description" content="negnasu.css example" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<title>negnasu.css example</title>
+		<link rel="stylesheet" href="negnasu.css" />
+		<!--
+			negnasu.css (1.0.0)
+			a CSS-stylesheet themed around the current 3.0 design of the australian purple wolf streamer Neg Nasu.
+
+			https://github.com/madpew/negnasu-css
+		-->
+		<style>
+			/* styles for the example page */
+			body {
+				font-family: 'Vanilla Extract', sans-serif;
+				margin: 0;
+				padding: 0;
+				user-select: none;
+			}
+
+			main {
+				background-color: rgb(from var(--nn-checkerboard-paper-light) r g b / 0.8);
+				min-height:100vh;
+				width:55vw;
+				min-width:700px;
+				margin: 0 auto 0 auto;
+				padding:2em 3em;
+			}
+		
+		</style>
+	</head>
+	
+	<body class="checkerboard">
+
+		<main class="text">
+
+			<h1>NegNasu.css</h1>
+
+			<h2>What is this ?</h2>
+			
+			<p>
+				NegNasu.css is a CSS-stylesheet themed around the current 3.0 design of the australian purple wolf streamer Neg Nasu.
+				This is an example page showing off all the available elements. No prerequisites, no images, just pure CSS.<br/>
+				<b>Nassify your website today!</b>
+			</p>
+			
+			<p class="area">
+				This project is a living work-in-progress.<br/>
+				Get the current version from <a href="https://github.com/madpew/negnasu-css">github.com/madpew/negnasu-css</a>.
+			</p>
+
+			<h3>Features:</h3>
+			<ul>
+				<li>colors, text-styles and font-definition</li>
+				<li>slide-headlines</li>
+				<li>lists</li>
+				<li>scrolling checkerboard</li>
+				<li>chatbubbles</li>
+				<li>sticky-notes</li>
+				<li>popovers</li>
+				<li>inputs</li>
+			</ul>
+
+			<p class="text light">Below you can find a few examples. For more information consider looking at the source.</p>
+
+			<hr/>
+
+			<h3>Checkerboard:</h3>
+
+			<p>Use the class checkerboard on elements to give them the scrolling background.</p>
+
+			<div style="height:4rem;" class="checkerboard"></div>
+
+			<h3>Chat-Bubbles:</h3>
+
+			<div class="chatbubble">These are chatbubbles!</div>
+			<div class="chatbubble" style="display:inline-block;">They can be used as inline or block elements<br/>multiple lines of text.</div>
+			<div class="chatbubble" data-tag="user" data-tag-text="User">Not only do they look pretty cool...</div>
+			<div class="chatbubble" data-tag="sub" data-tag-text="Subscriber">..they also come in different colors!</div>
+			<div class="chatbubble" data-tag="vip" data-tag-text="VIP">They can contain emoji👍 and/or images and wrap with very long sentences if that is a requirement or you're one of those people who can't seem to finish a sentence in a suitable length.</div>
+			<div class="chatbubble" data-tag="mod" data-tag-text="Moderator">Or maybe<br/>you prefer to channel<br/>your inner Gen-Z<br/>and do linebreaks<br/>in between.</div>
+			<div class="chatbubble" data-tag="broadcaster" data-tag-text="NegNasu">Colors and labels can be changed with data-properties.</div>
+			<div class="chatbubble" data-tag="user" data-tag-text="VeryLongLabelThatIsWayTooLong">Long labels extend and push aside the text-content</div>
+
+			<h3>Sticky-Notes:</h3>
+			
+			<p>Those always come in handy! Available in different colors and optional tape-strip they even work to add photos to your site.</p>
+			
+			<div>
+				<div class="stickynote" data-attachment="tape">This is a<br/>stickynote!<br/>with tape</div>
+				<div class="stickynote" data-color="purple">this one is<br/>purple!</div>
+				<div class="stickynote" data-color="blue">Use the<br/>data-properties<br/>color and<br />attachment to<br/>customize</div>
+				<div class="stickynote" data-color="white"><img src="https://placecats.com/300/200" class="photo" />This is me!</div>
+				<div class="stickynote" data-attachment="tape" data-color="white"><img src="https://placecats.com/300/300" class="photo" /></div>
+			</div>
+
+			<h3>Popovers:</h3>
+
+			<p>Also known as popup or dialog are useful when you need to get the attention away from the main content. They can also be used in normal page content.</p>
+			
+			<div class="popover" data-type="mod" data-title="Example">
+				This is what popovers look like.<br/>
+				If you set the data-x property, the first button will become the x-button.<br/>
+				The title-text and color is also set using the properties data-type and data-title.<br/>
+			</div>
+
+			<button popovertarget="test-popover">open example popover</button>
+
+			<h3>Inputs:</h3>
+
+			<p>When you need more input than just clicking, use these tasty looking input-elements and fieldsets to keep things tidy. You wouldn't wanna make a mess, do you?</p>
+			
+			<fieldset>
+				<legend>text inputs</legend>
+				<input type="text" placeholder="text field" />
+				<input type="password" placeholder="required field" required />
+				<input type="text" placeholder="disabled field" disabled value="disabled" />
+			</fieldset>
+			
+			<fieldset data-tag="sub">
+				<legend>buttons</legend>
+				<button type="button">active button</button>
+				<button type="button" disabled>disabled</button>
+			</fieldset>
+			
+			<fieldset data-tag="mod">
+				<legend>checkboxes</legend>
+				<label><input type="checkbox" />active checkbox</label><br/>
+				<label><input type="checkbox" disabled />disabled checkbox</label><br/>
+				<label>disabled checked checkbox<input type="checkbox"  disabled checked /></label>
+			</fieldset>
+
+			<div class="area">
+				<h3>Missing something?</h3>
+				<p>Feel free to report bugs or suggest missing elements on the github issue-tracker. Contributions welcome, but please get in contact before sending a pull-request.</p>
+			</div>
+		</main>
+
+		<div id="test-popover" popover="manual" class="popover" data-type="sub" data-title="PopOver" data-x="true">
+			<button type="button" popovertarget="test-popover" popovertargetaction="hide">X</button>
+			This is an example popover. Nothing to see here.
+		</div>
+	</body>
+</html>
